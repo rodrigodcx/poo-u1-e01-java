@@ -2,29 +2,36 @@ package com.example.project;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 
 import java.io.*;
 
 public class TestHello {
 
-   @Test
-   public void testHelloWorld()
-   {
-     PrintStream originalOut = System.out;
-     ByteArrayOutputStream bos = new ByteArrayOutputStream();
-     System.setOut(new PrintStream(bos));
+	private String BREAK = System.lineSeparator();
 
-     // action
-     Hello.main(null);
+	@Test
+	public void exercicio01() {
+		rodarTestarOutput("Arcos Dourados Com. de Alimentos LTDA" + BREAK + 
+				"Av. Projetada Leste, 500 EUC F32/33/34" + BREAK + 
+				"Br. Sta Genebra - Campinas - SP" + BREAK + 
+				"CEP:13080-395 Tel (19) 3756-7408" + BREAK + 
+				"Loja 1317 (PDP)CNPJ: 42.591.651/0797-34" + BREAK + 
+				"IE: 244.898.500.113" + BREAK);
+	}
 
-     // assertion
-     assertEquals("Hello world!\n", bos.toString());
+	private void rodarTestarOutput(String expected) {
+		PrintStream originalOut = System.out;
+		ByteArrayOutputStream bos = new ByteArrayOutputStream();
+		System.setOut(new PrintStream(bos));
 
-     // undo the binding in System
-     System.setOut(originalOut);
-   }
+		// action
+		CupomFiscal.main(null);
+
+		// assertion
+		assertEquals(expected, bos.toString());
+
+		// undo the binding in System
+		System.setOut(originalOut);
+	}
 }

@@ -16,7 +16,8 @@ public class TestHello {
 				"Av. Projetada Leste, 500 EUC F32/33/34" + BREAK + 
 				"Br. Sta Genebra - Campinas - SP" + BREAK + 
 				"CEP:13080-395 Tel (19) 3756-7408" + BREAK + 
-				"Loja 1317 (PDP)CNPJ: 42.591.651/0797-34" + BREAK + 
+				"Loja 1317 (PDP)" + BREAK + 
+				"CNPJ: 42.591.651/0797-34" + BREAK + 
 				"IE: 244.898.500.113" + BREAK);
 	}
 

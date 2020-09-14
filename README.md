@@ -1,14 +1,8 @@
-# Autograding Example: Java
-This example project is written in Java, and tested with Gradle/JUnit.
+# Unidade 1 - Exercício 01
+Esse exercício foi escrito em Java e testado com Gradle/jUnit.
 
-### The assignment
-The tests are currently failing because of an output mismatch. Fixing the `System.out.println` in the main method will make the tests green.
+Atualmente o teste está falhando pois a saída está diferente do esperado.
+Conserte o método `main` em `CupomFiscal` para que os testes passem.
 
-### Setup command
-N/A
-
-### Run command
+### Comando para execução
 `gradle test`
-
-### Notes
-- The JDK is installed on GitHub Actions machines, so you're also able to directly invoke `javac`, `java`, or any other CLI command included in the JDK. 
